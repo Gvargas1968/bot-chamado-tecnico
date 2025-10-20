@@ -1,26 +1,26 @@
-# Este arquivo contém seu token do bot
-# Substitua pelo seu token real do @BotFather
-TELEGRAM_TOKEN ="7588285399:AAHd4sjph6s1Ts-uAwHIcFZAxseApZXUEj8"
+import os
+from dotenv import load_dotenv
+
+# Carrega variáveis de ambiente do arquivo .env
+load_dotenv()
+
+# Token do bot do Telegram (obtido com @BotFather)
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 
 # Configurações do MySQL
-#MYSQL_HOST = "mysql"
-MYSQL_HOST = "10.140.2.157"
-MYSQL_USER = "root"
-MYSQL_PASSWORD = "M$&dff!ch"
-MYSQL_DATABASE = "chamados_botbff"
+MYSQL_HOST = os.getenv("MYSQL_HOST", "localhost")
+MYSQL_USER = os.getenv("MYSQL_USER")
+MYSQL_PASSWORD = os.getenv("MYSQL_PASSWORD")
+MYSQL_DATABASE = os.getenv("MYSQL_DATABASE")
 
-# Defina a senha do administrador para permitir atualização de chamados
-ADMIN_PASSWORD = "1234"
-# Senha do administrador
-#ADMIN_PASSWORD = "senha123"
+# Senha do administrador para resolver chamados
+ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD")
 
-# Técnico responsável
-TECNICO_RESPONSAVEL_ID = 1866083056
-#TECNICO_RESPONSAVEL_ID =  1559668526
+# ID do usuário do Telegram do técnico responsável
+TECNICO_RESPONSAVEL_ID = int(os.getenv("TECNICO_RESPONSAVEL_ID", 0))
 
-# IDs específicos para roteamento por categoria.
-# Substitua pelos IDs de usuários ou grupos do Telegram para cada técnico.
-ID_TECNICO_REDE = 1866083056
-ID_TECNICO_HARDWARE = 1866083056
-ID_TECNICO_SOFTWARE = 1866083056
-ID_TECNICO_IMPRESSORA = 1866083056
+# IDs específicos para roteamento por categoria (opcional)
+ID_TECNICO_REDE = os.getenv("ID_TECNICO_REDE")
+ID_TECNICO_HARDWARE = os.getenv("ID_TECNICO_HARDWARE")
+ID_TECNICO_SOFTWARE = os.getenv("ID_TECNICO_SOFTWARE")
+ID_TECNICO_IMPRESSORA = os.getenv("ID_TECNICO_IMPRESSORA")

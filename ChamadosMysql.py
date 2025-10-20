@@ -4,7 +4,7 @@ from telegram.ext import (
     ConversationHandler, ContextTypes, CallbackQueryHandler
 )
 from datetime import datetime
-from config_bot_ChamadoBFF import TELEGRAM_TOKEN, ADMIN_PASSWORD, TECNICO_RESPONSAVEL_ID
+from config_bot_ChamadoBFF import TELEGRAM_TOKEN, ADMIN_PASSWORD, TECNICO_RESPONSAVEL_ID, MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE
 import random
 # Remova o import do sqlite3 e adicione:
 import mysql.connector
